@@ -61,7 +61,7 @@ def get_comments():
         return redirect(url_for('main.index'))
 
 
-    dic = comments.get_yote(pitch.id)
+    dic = comments.get_yote(id)
     return  render_template('auth/new_comment.html',acha=commentnini,comment=dic)
 
 @auth.route('/pitches',methods = ["GET","POST"])
