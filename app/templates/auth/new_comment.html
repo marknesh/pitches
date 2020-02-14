@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf%}
+
+{% block content %}
+<div class="container">
+<div class="row">
+<div class="col-md-6">
+
+{% for dic in comment %}
+    <li>{{dic.comment}}</li>
+{% endfor %}
+
+
+
+
+</div>
+<div class="col-md-6">
+{{wtf.quick_form(acha)}}
+
+</div>
+
+
+
+
+</div>
+</div>
+
+{% endblock%}

@@ -1,0 +1,33 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+   {{super () }}
+<h1 style="text-align:center">PITCHES</h1>
+<a href="/pitches" class="badge progress-bar-success">add new  pitch </a>
+<h1>CATEGORIES</h1>
+<h2>Business</h2>
+<h3><li>Petroleum selling company</li></h3>
+
+ <a href="/come" class="badge progress-bar-warning  ">Add comment</a>
+<h3><li>Banana selling company</li></h3>
+<a href="/come" class="badge progress-bar-warning  ">Add comment</a>
+<p>
+{% for neew in pitch %}
+<h3><Li>{{neew.pitches}}</Li></h3>
+<a href="/come" class="badge progress-bar-warning  ">Add comment</a>
+{% endfor %}
+</p>
+
+
+{% for pitchess in lol %}
+    {{pitchess.pitches}}
+{% endfor %}
+
+
+
+
+
+{% endblock %}
+
