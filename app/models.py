@@ -66,7 +66,22 @@ class comments(db.Model):
     def get_yote(cls,id):
         coke=comments.query.filter_by().all()
         return coke
+class votes(db.Model):
 
+    _tablename_="votes"
+    id=db.Column(db.Integer,primary_key=True)
+    upvotes_id=db.Column(db.Integer)
+    downvotes_id=db.Column(db.Integer)
+
+
+    def save_votes(self):
+        db.session.add(self)
+        db.session.commit()
+
+    @classmethod
+
+    def get_votes(cls):
+        votes=votes.query.filter
 
 
 
