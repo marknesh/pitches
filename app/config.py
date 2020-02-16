@@ -2,7 +2,7 @@ import os
 
 class Config:
 
-    # SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://mike:Markmunene18@localhost/pitch'
+
 
     MAIL_SERVER='smtp.gmail.com'
     MAIL_PORT=587
@@ -12,7 +12,7 @@ class Config:
 
 
 class ProdConfig(Config):
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+    SQLALCHEMY_DATABASE_URI = os.environ.get("HEROKU_POSTGRESQL_CHARCOAL_URL")
 
 
 
