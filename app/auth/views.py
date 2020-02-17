@@ -51,6 +51,7 @@ def get_petroleum():
     return render_template('petroleum.html')
 
 @auth.route('/come',methods=['GET','POST'])
+@login_required
 def get_comments():
     commentnini=commmentForm()
     if commentnini.validate_on_submit():
@@ -65,6 +66,7 @@ def get_comments():
     return  render_template('auth/new_comment.html',acha=commentnini,comment=dic)
 
 @auth.route('/pitches',methods = ["GET","POST"])
+@login_required
 def get_pitches():
     pitchform=PitchForm()
     if pitchform.validate_on_submit():
@@ -78,6 +80,7 @@ def get_pitches():
     return  render_template('pitches.html',pitchform=pitchform,pitch=neew)
 
 @auth.route('/travel',methods = ["GET","POST"])
+@login_required
 def get_travel():
     travelform=TravelForm()
     if travelform.validate_on_submit():
