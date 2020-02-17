@@ -29,6 +29,10 @@ class LoginForm(FlaskForm):
 class PitchForm(FlaskForm):
     pitch=StringField('Your pitch',validators=[DataRequired()])
     submit = SubmitField('submit')
+class TravelForm(FlaskForm):
+    pitch=StringField('Your pitch',validators=[DataRequired()])
+    submit = SubmitField('submit')
+
 
 
 
