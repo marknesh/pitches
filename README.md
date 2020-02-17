@@ -9,7 +9,7 @@ This application is used to pitch different ideas ideas based on different categ
 
 ## Operating
 On the opening the website url given above,the user must first login inorder to comment on a pitch or even add a pitch.
-The forms are well secured with csrf tokens.
+The forms are well secured with csrf tokens hence information for the user is secured.
 
 ##  Technology used
 I used python to create the application together with the flask framework which was really helpful.
