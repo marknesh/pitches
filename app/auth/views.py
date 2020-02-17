@@ -85,7 +85,7 @@ def get_travel():
     travelform=TravelForm()
     if travelform.validate_on_submit():
         travels=travelform.pitch.data
-        new_travels=travels
+        new_travels=pitch(pitches=travels)
         new_travels.save_pitch()
 
         return  redirect(url_for('main.index'))
